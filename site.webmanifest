@@ -1,7 +1,7 @@
 {
   "name": "Zapal Links",
   "short_name": "Zapal Links",
-  "theme_color": "#f84c0b",
+  "theme_color": "#000",
   "background_color": "#000",
   "icons": [
     {
@@ -10,5 +10,35 @@
     }
   ],
   "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "shortcuts": [
+    {
+      "name": "Book a call with CTO",
+      "url": "https://go.zapal.tech/with-cto"
+    },
+    {
+      "name": "Book a call with CBDO",
+      "url": "https://go.zapal.tech/with-cbdo"
+    },
+    {
+      "name": "Website",
+      "url": "https://www.zapal.tech"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://go.zapal.tech/linkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://go.zapal.tech/instagram"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:hello@zapal.tech"
+    },
+    {
+      "name": "Phone",
+      "url": "tel:+38 097 958 94 70"
+    }
+  ]
 }
