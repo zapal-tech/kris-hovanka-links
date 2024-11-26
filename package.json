@@ -1,0 +1,25 @@
+{
+  "name": "@zapal/links",
+  "version": "1.0.0",
+  "scripts": {
+    "minify:js": "minify index.js > dist/index.js && minify service-worker.js > dist/service-worker.js",
+    "minify:css": "csso css/reset.css --output dist/css/reset.css && csso css/style.css --output dist/css/style.css",
+    "minify:html": "minify index.html > dist/index.html",
+    "minify": "npm run minify:js && npm run minify:css && npm run minify:html",
+    "copyfiles": "copyfiles images/**/* fonts/**/* dist",
+    "dir": "mkdirp dist dist/css",
+    "build": "pnpm dir && pnpm copyfiles && pnpm minify"
+  },
+  "author": {
+    "name": "Zapal",
+    "email": "hello@zapal.tech",
+    "url": "https://www.zapal.tech"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "csso-cli": "^4.0.2",
+    "minify": "^12.0.0",
+    "mkdirp": "^3.0.1"
+  }
+}

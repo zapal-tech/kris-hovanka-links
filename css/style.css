@@ -1,382 +1,360 @@
-/*
-* LittleLink
-* https://littlelink.io
-* Free to use under the MIT license
-* http://www.opensource.org/licenses/mit-license.php
-*/
-
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base Typography Settings  */
 :root {
-	font-size:16px;
+  font-size: 16px;
 }
 
-/* Grid
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .container {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;     				/* 600px */
-    text-align:center;
-	margin:0 auto;
-	padding:3rem 1.25rem 0 1.25rem;
-	box-sizing:border-box;
+/* Font Face Definitions  */
+@font-face {
+  font-display: swap;
+  font-family: Ronald;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Ronald/Ronald-Regular.woff2") format("woff2");
 }
-.container-left {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-	text-align:left;
-	margin:0 auto;
-	padding:0 1.25rem;
-	box-sizing:border-box;
+@font-face {
+  font-display: swap;
+  font-family: Ronald;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Ronald/Ronald-Medium.woff2") format("woff2");
 }
-.container-left p {
-	margin-bottom: 1rem;  				/* 16px space between paragraphs */
-  }
+@font-face {
+  font-display: swap;
+  font-family: Ronald;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Ronald/Ronald-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Ronald;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/Ronald/Ronald-ExtraBold.woff2") format("woff2");
+}
+
+/* Grid */
+.button-stack {
+  position: relative;
+  max-width: 20rem; /* 600px */
+}
+
+.button-stack > a {
+  position: relative;
+  z-index: 1;
+}
+
+.button-stack > a:last-child {
+  margin-bottom: 0;
+}
+
+.button-stack > i {
+  position: absolute;
+  background-color: #4a4a4a;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+}
+
+.button-stack > i:nth-child(1) {
+  top: 0;
+}
+
+.button-stack > i:nth-child(2) {
+  bottom: 0;
+}
+
+.container,
 .column {
-	position:center;
-	width:100%;
-	float:center;
-	box-sizing:border-box;
+  min-height: 100vh;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 1.25rem;
+}
+
+.column {
+  position: relative;
+  width: max-content;
+  float: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.column > i {
+  position: absolute;
+  background-color: #4a4a4a;
+  top: 50%;
+  width: 1px;
+  height: 100%;
+  min-height: 100vh;
+  transform: translateY(-50%);
+}
+
+.column > i:nth-child(1) {
+  left: 0;
+}
+
+.column > i:nth-child(2) {
+  right: 0;
+}
+
 /* For devices larger than 400px */
-  @media (min-width:25rem) {            /* 400px */
-    .container {
-	width:85%;
-	padding-left:0;
-	padding-right:0;
-}
-}/* For devices larger than 550px */
-  @media (min-width:34.375rem) {        /* 550px */
-    .container {
-	width:80%;
-}
-.column,.columns {
-	margin-left:0;
-}
-.column:first-child,.columns:first-child {
-	margin-left:0;
-}
+@media (min-width: 25rem) {
+  /* 400px */
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-/* Base Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  body {
-	margin:0;
-	padding:0;
-	background-color:#ffffff;
-	color:#1a1a1a;
-	font-family:"Open Sans",system-ui;
-	font-size:1.125rem;     				/* 18px */
-    font-weight:400;
-	line-height:1.6;
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Ronald, system-ui;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-/* Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1 {
-	margin:0 0 0.5rem 0;
-	font-size:3rem;         		/* 48px */
-    font-weight:800;
-	line-height:1;
-	letter-spacing:0;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-	hyphens:auto;           		/* Delete this to remove automatic hyphen on line break */
+/* Typography */
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 3rem; /* 48px */
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto; /* Delete this to remove automatic hyphen on line break */
 }
+
 .container p {
-	margin:0 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base Typography Settings */
 /* Base size - 16px browser default */
 :root {
-  font-size:16px;           /* Using a 1.25 modular scale for typography */
-  --scale-0:1rem;           /* 16px */
-  --scale-1:1.25rem;        /* 20px */
-  --scale-2:1.563rem;       /* 25px */
-  --scale-3:1.953rem;       /* 31px */
-  --scale-4:2.441rem;       /* 39px */
-  --scale-5:3.052rem;       /* 49px */
-  
+  font-size: 16px; /* Using a 1.25 modular scale for typography */
+  --scale-0: 1rem; /* 16px */
+  --scale-1: 1.25rem; /* 20px */
+  --scale-2: 1.563rem; /* 25px */
+  --scale-3: 1.953rem; /* 31px */
+  --scale-4: 2.441rem; /* 39px */
+  --scale-5: 3.052rem; /* 49px */
+
   /* Spacing units */
-  --spacing-xs:0.5rem;      /* 8px */
-  --spacing-s:1rem;         /* 16px */
-  --spacing-m:1.5rem;       /* 24px */
-  --spacing-l:2rem;         /* 32px */
-  --spacing-xl:3rem;        /* 48px */
-  --spacing-xxl:4rem;       /* 64px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-s: 1rem; /* 16px */
+  --spacing-m: 1.5rem; /* 24px */
+  --spacing-l: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-xxl: 4rem; /* 64px */
 }
 
 /* Avatar */
 .avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
-	border-radius: 50%;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-  }
+  height: 4rem;
+  width: auto;
+  background-position: center;
+  margin: 0 auto var(--spacing-m);
+  display: block;
+}
 
 /* Typography Scale */
 h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
-  	font-weight:800;
-	line-height:1.1;
-	letter-spacing:-0.02em;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
+  margin: 0 0 var(--spacing-m) 0;
+  font-size: var(--scale-5); /* ~49px */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 body {
-	font-size:var(--scale-1);           /* 20px */
-  	line-height:1.6;
+  font-size: var(--scale-1); /* 20px */
+  line-height: 1.6;
 }
+
 .container p {
-	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
-	line-height:1.6;
+  margin: 0 0 var(--spacing-l) 0;
+  font-size: var(--scale-1);
+  line-height: 1.6;
 }
 
 /* Container spacing */
 .container {
-	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-	text-align:center;
+  padding: 0 var(--spacing-m);
+  text-align: center;
 }
 
-/* Footer */
-footer {
-	margin:var(--spacing-xxl) 0;            /* 4rem (64px) top and bottom */
-    font-size:var(--scale-0);
+.column {
+  padding: var(--spacing-l) 0 var(--spacing-xl);
 }
 
 /* Responsive adjustments */
-@media (max-width:34.375rem) {              /* 550px */
+@media (max-width: 34.375rem) {
+  /* 550px */
   h1 {
-	font-size:var(--scale-4);
-}
-body {
-	font-size:var(--scale-0);
-}
-.container p {
-	font-size:var(--scale-0);
-}
-.avatar {
-	margin-bottom:var(--spacing-m);
-}
-footer {
-	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
-}
+    font-size: var(--scale-4);
+  }
+
+  body {
+    font-size: var(--scale-0);
+  }
+
+  .container p {
+    font-size: var(--scale-0);
+  }
+
+  .avatar {
+    margin-bottom: var(--spacing-m);
+  }
 }
 
-/* Links
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
-	color:#2457F5;
-	text-decoration:underline;
+/* Links */
+a {
+  color: #fff;
+  text-decoration: underline;
 }
+
 a:hover {
-	color:#083BDA;
+  color: #f84c0b;
 }
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,button {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	width:18.75rem;             	/* 300px */
- 	min-height:3rem;                /* 48px */
-  	padding:0.75rem 1rem;         	/* 12px ; 16px */
-  	font-size:1.125rem;           	/* 18px */
-  	font-weight:700;
-	text-decoration:none;
-	white-space:normal;
-  	background-color:var(--button-background,transparent);
-	color:var(--button-text,#000000);
-	border:var(--button-border,none);
-	border-radius:0.5rem;
-	cursor:pointer;
-	box-sizing:border-box;
-	hyphens:auto;               	/* Delete this to remove automatic hyphen on line break */
-  	margin-bottom:1rem;
-	text-align:center;
-	line-height:1.3;
+/* Buttons */
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  min-height: 3rem; /* 48px */
+  padding: 0.75rem 1rem; /* 12px ; 16px */
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  text-decoration: none;
+  white-space: normal;
+  background-color: var(--button-background, transparent);
+  color: var(--button-text, #fff);
+  border: var(--button-border, 1px solid #ccc);
+  /* border-radius:0.5rem; */
+  cursor: pointer;
+  box-sizing: border-box;
+  hyphens: auto; /* Delete this to remove automatic hyphen on line break */
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1;
 }
 
-/* Icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 375px) {
+  .button,
+  button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+/* Icons */
 .icon {
-	width:1.25rem;
-	height:1.25rem;
-	margin-right:0.5rem;
-	flex-shrink:0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.175rem;
+  flex-shrink: 0;
 }
 
-/* Avatar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-  }
-
-   /* Modifier for no avatar rounding */
-   .avatar--none {
-	border-radius: 0%;
-  }
-
-  /* Modifier for rounded avatar */
-  .avatar--rounded {
-	border-radius: 50%;
-  }
-  
-  /* Modifier for slightly rounded corners */
-  .avatar--soft {
-	border-radius: 0.5rem;   /* 8px rounded corners */
-  }
-
-/* Theme System
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Theme System */
 /* Light theme is default above */
-  
+
 /* Dark theme */
 :root.theme-dark {
-	color-scheme:dark;
+  color-scheme: dark;
 }
+
 :root.theme-dark :focus-visible {
-	outline: 2px solid #4899F7;
-	outline-offset: 2px;
-  }
+  outline: 2px solid #d10000;
+  outline-offset: 2px;
+}
+
 :root.theme-dark body {
-	background-color:#121212;
-	color:#ffffff;
+  background-color: #000;
+  color: #fff;
 }
+
 :root.theme-dark a:not(.button) {
-	color:#4899F7;
+  color: #d10000;
 }
+
 :root.theme-dark a:not(.button):hover {
-	color:#7AB8FF;
+  color: #f84c0b;
 }
 
 /* Auto theme */
 :root.theme-auto {
-	color-scheme:light dark;
+  color-scheme: light dark;
 }
-@media (prefers-color-scheme:dark) {
-	:root.theme-auto body {
-	background-color:#121212;
-	color:#ffffff;
-}
-:root.theme-auto :focus-visible {
-    outline: 2px solid #4899F7;
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto body {
+    background-color: #000;
+    color: #fff;
+  }
+
+  :root.theme-auto :focus-visible {
+    outline: 2px solid #d10000;
     outline-offset: 2px;
   }
-:root.theme-auto a:not(.button) {
-	color:#4899F7;
-}
-:root.theme-auto a:not(.button):hover {
-	color:#7AB8FF;
-}
+
+  :root.theme-auto a:not(.button) {
+    color: #d10000;
+  }
+
+  :root.theme-auto a:not(.button):hover {
+    color: #f84c0b;
+  }
 }
 
-/* Button Text Color Override
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-    .button:hover,button:hover {
-	color:var(--button-text);
+/* Button Text Color Override */
+.button:hover,
+button:hover {
+  color: var(--button-text);
 }
 
-/* Responsive Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  @media (max-width:34.375rem) {            /* 550px */
-    h1 {
-	font-size:2rem;                         /* 32px */
-	}
-	body {
-	font-size:1rem;                    		/* 16px */
-	}
+/* Responsive Typography */
+@media (max-width: 34.375rem) {
+  /* 550px */
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+
+  body {
+    font-size: 1rem; /* 16px */
+  }
 }
 
-/* Privacy Page Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-nav {
-	margin:var(--spacing-l) 0;
-	text-align:left;
-}
-section {
-	margin:var(--spacing-xl) 0;
-	text-align:left;
-}
-h2 {
-	font-size:var(--scale-3);
-	font-weight:700;
-	margin-bottom:var(--spacing-m);
-}
-h3 {
-	font-size:var(--scale-2);
-	font-weight:600;
-	margin:var(--spacing-l) 0 var(--spacing-s) 0;
-}
-ul {
-	list-style:none;
-	padding:0;
-	margin:0 0 var(--spacing-m) 0;
-}
-ul li {
-	margin-bottom:var(--spacing-xs);
-}
-
-/* Privacy page specific responsive adjustments */
-  @media (max-width:34.375rem) {
-	h2 {
-	font-size:var(--scale-2);
-	}
-	h3 {
-	font-size:var(--scale-1);
-	}
-	section {
-	margin:var(--spacing-l) 0;
-	}
-}
-
-/* Font Face Definitions
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:400;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:600;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:700;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
-}
-@font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:800;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

@@ -1,0 +1,14 @@
+{
+  "name": "Zapal Links",
+  "short_name": "Zapal Links",
+  "theme_color": "#f84c0b",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}
