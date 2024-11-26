@@ -14,10 +14,18 @@ self.addEventListener("install", (event) => {
           "/css/styles.css",
           "/images/logo.svg",
           "/images/zapal-logo-with-text-white.svg",
-          "https://www.zapal.tech/fonts/Ronald/Ronald-Regular.woff2",
-          "https://www.zapal.tech/fonts/Ronald/Ronald-Medium.woff2",
-          "https://www.zapal.tech/fonts/Ronald/Ronald-SemiBold.woff2",
-          "https://www.zapal.tech/fonts/Ronald/Ronald-ExtraBold.woff2",
+          "/images/icons/clutch.svg",
+          "/images/icons/generic-calendar.svg",
+          "/images/icons/generic-phone.svg",
+          "/images/icons/generic-website.svg",
+          "/images/icons/generic-calendar.svg",
+          "/images/icons/instagram.svg",
+          "/images/icons/linkedin.svg",
+          "/images/icons/spotify.svg",
+          "/fonts/Ronald/Ronald-Regular.woff2",
+          "/fonts/Ronald/Ronald-Medium.woff2",
+          "/fonts/Ronald/Ronald-SemiBold.woff2",
+          "/fonts/Ronald/Ronald-ExtraBold.woff2",
         ])
       )
   );
