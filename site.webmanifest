@@ -14,31 +14,23 @@
   "shortcuts": [
     {
       "name": "Book a call with CTO",
-      "url": "https://go.zapal.tech/with-cto"
+      "url": "/with-cto"
     },
     {
       "name": "Book a call with CBDO",
-      "url": "https://go.zapal.tech/with-cbdo"
+      "url": "/with-cbdo"
     },
     {
       "name": "Website",
-      "url": "https://www.zapal.tech"
+      "url": "/website"
     },
     {
       "name": "LinkedIn",
-      "url": "https://go.zapal.tech/linkedin"
+      "url": "/linkedin"
     },
     {
       "name": "Instagram",
-      "url": "https://go.zapal.tech/instagram"
-    },
-    {
-      "name": "Email",
-      "url": "mailto:hello@zapal.tech"
-    },
-    {
-      "name": "Phone",
-      "url": "tel:+38 097 958 94 70"
+      "url": "/instagram"
     }
   ]
 }

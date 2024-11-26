@@ -6,7 +6,7 @@
     "minify:css": "csso css/reset.css --output dist/css/reset.css && csso css/style.css --output dist/css/style.css",
     "minify:html": "minify index.html > dist/index.html",
     "minify": "npm run minify:js && npm run minify:css && npm run minify:html",
-    "copyfiles": "copyfiles site.webmanifest images/* images/**/* fonts/**/* dist",
+    "copyfiles": "copyfiles site.webmanifest _redirects images/* images/**/* fonts/**/* dist",
     "dir": "mkdirp dist dist/css",
     "build": "pnpm dir && pnpm copyfiles && pnpm minify"
   },
