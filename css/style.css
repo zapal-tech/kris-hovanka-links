@@ -133,6 +133,15 @@ h1 {
   --spacing-xxl: 4rem; /* 64px */
 }
 
+/* Photo */
+.photo {
+  height: auto;
+  width: 10rem;
+  border-radius: 999px;
+  margin: 0 auto var(--spacing-m);
+  display: block;
+}
+
 /* Avatar */
 .avatar {
   height: 4rem;
