@@ -1,5 +1,5 @@
 {
-  "name": "@zapal/links",
+  "name": "@zapal/kris-hovanka-links",
   "version": "1.0.0",
   "scripts": {
     "minify:js": "minify index.js > dist/index.js && minify service-worker.js > dist/service-worker.js",
@@ -22,8 +22,8 @@
     "minify": "^12.0.0",
     "mkdirp": "^3.0.1"
   },
+  "packageManager": "pnpm@10.15.1",
   "engines": {
-    "node": ">=20",
-    "pnpm": "9.14.2"
+    "node": ">=22"
   }
 }

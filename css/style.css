@@ -3,36 +3,6 @@
   font-size: 16px;
 }
 
-/* Font Face Definitions  */
-@font-face {
-  font-display: swap;
-  font-family: Ronald;
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Ronald/Ronald-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: Ronald;
-  font-style: normal;
-  font-weight: 500;
-  src: url("/fonts/Ronald/Ronald-Medium.woff2") format("woff2");
-}
-/* @font-face {
-  font-display: swap;
-  font-family: Ronald;
-  font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/Ronald/Ronald-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: Ronald;
-  font-style: normal;
-  font-weight: 800;
-  src: url("/fonts/Ronald/Ronald-ExtraBold.woff2") format("woff2");
-} */
-
 /* Grid */
 .button-stack {
   position: relative;
@@ -119,9 +89,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: Ronald, system-ui;
+  background-color: #eefbf6;
+  color: #072721;
+  font-family: Inter, system-ui;
   font-size: 1.125rem; /* 18px */
   font-weight: 400;
   line-height: 1.6;
@@ -226,12 +196,12 @@ body {
 
 /* Links */
 a {
-  color: #fff;
+  color: #16856b;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #f84c0b;
+  color: #126a57;
 }
 
 /* Buttons */
@@ -244,19 +214,20 @@ button {
   min-height: 3rem; /* 48px */
   padding: 0.75rem 1rem; /* 12px ; 16px */
   font-size: 1.125rem; /* 18px */
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   white-space: normal;
-  background-color: var(--button-background, transparent);
-  color: var(--button-text, #fff);
-  border: var(--button-border, 1px solid #ccc);
-  /* border-radius:0.5rem; */
+  background-color: var(--button-background, #d6f5e7);
+  color: var(--button-text, #072721);
+  border: var(--button-border, 0px);
+  border-radius: 0.5rem;
   cursor: pointer;
   box-sizing: border-box;
   hyphens: auto; /* Delete this to remove automatic hyphen on line break */
   margin-bottom: 1rem;
   text-align: center;
   line-height: 1;
+  transition: all ease-in-out 150ms;
 }
 
 @media (max-width: 375px) {
@@ -279,60 +250,11 @@ button {
   flex-shrink: 0;
 }
 
-/* Theme System */
-/* Light theme is default above */
-
-/* Dark theme */
-:root.theme-dark {
-  color-scheme: dark;
-}
-
-:root.theme-dark :focus-visible {
-  outline: 2px solid #d10000;
-  outline-offset: 2px;
-}
-
-:root.theme-dark body {
-  background-color: #000;
-  color: #fff;
-}
-
-:root.theme-dark a:not(.button) {
-  color: #d10000;
-}
-
-:root.theme-dark a:not(.button):hover {
-  color: #f84c0b;
-}
-
-/* Auto theme */
-:root.theme-auto {
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto body {
-    background-color: #000;
-    color: #fff;
-  }
-
-  :root.theme-auto :focus-visible {
-    outline: 2px solid #d10000;
-    outline-offset: 2px;
-  }
-
-  :root.theme-auto a:not(.button) {
-    color: #d10000;
-  }
-
-  :root.theme-auto a:not(.button):hover {
-    color: #f84c0b;
-  }
-}
-
 /* Button Text Color Override */
 .button:hover,
 button:hover {
-  color: var(--button-text);
+  transition: all ease-in-out 150ms;
+  background-color: #b0ead3;
 }
 
 /* Responsive Typography */
